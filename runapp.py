@@ -7,7 +7,7 @@
 from flask import Flask, make_response
 from flask import render_template
 import datetime
-from class_declaration import Issue
+# from class_declaration import Issue
 
 app = Flask(__name__, template_folder='.')
 
@@ -23,12 +23,12 @@ def home():
     return response
 
 
-@app.route('/search', methods=['GET'])
-def search():
-
-    ## fetch data from server
-
-    html = render_template('search.html')
-    response = make_response(html)
-    return response
+# @app.route('/search', methods=['GET'])
+# def search():
+#
+#     ## fetch data from server
+#
+#     html = render_template('search.html')
+#     response = make_response(html)
+#     return response
 
