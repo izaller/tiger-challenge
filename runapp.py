@@ -23,12 +23,23 @@ def home():
     return response
 
 
-# @app.route('/search', methods=['GET'])
-# def search():
-#
-#     ## fetch data from server
-#
-#     html = render_template('search.html')
-#     response = make_response(html)
-#     return response
+@app.route('/listings', methods=['GET'])
+def listings():
 
+    ## fetch data from server
+
+    listings = [1, 2, 3, 4, 5, 6, 7]
+
+    html = render_template('listings.html', listings=listings)
+    response = make_response(html)
+    return response
+
+
+@app.route('/details', methods=['GET'])
+def details():
+
+    ## fetch data from server
+
+    html = render_template('details.html')
+    response = make_response(html)
+    return response
